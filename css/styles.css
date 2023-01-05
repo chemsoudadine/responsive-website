@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: "Ubuntu" sans-serif;
+    box-sizing: border-box;
+}
+
+.navbar {
+    position: fixed;
+    background-color: red;
+    width: 100%;
+    padding: 10px 0;
+    top: 0;
+    z-index: 999;
+    transition: 5% linear;
+}
+
+.inner-width {
+    max-width: 1500px;
+    margin : auto;
+    padding: 0 40px;
+}
+
+.navbar .inner-width {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.logo {
+    width: 44px;
+    height: 52px;
+    background-image: url("../img/crown.png");
+    background-size: contain;
+    color: white;
+
+}
