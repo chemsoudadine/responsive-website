@@ -6,6 +6,8 @@
     box-sizing: border-box;
 }
 
+
+/* --------------- Navbar ------------------------  */
 .navbar {
     position: fixed;
     background-color: transparent;
@@ -68,7 +70,6 @@
     color: #48dbfb !important;
 }
 
-
 .sticky {
     background-color: #fff;
     padding: 18px 0;
@@ -87,6 +88,8 @@
 
 }
 
+
+/* -------------------- Home section ------------------- */
 #home {
     height: 100vh;
     min-height: 500px;
@@ -117,7 +120,6 @@
     content: " Dedine";
     animation: textanim 10s linear infinite;
 }
-
 
 section {
     padding: 100px 0;
@@ -176,7 +178,7 @@ section {
     font-size: 16px;
 }
 
-.about-text h3 span:nth-child(1)::after,
+.about-text h3 span:nth-child(1):after,
 .about-text h3 span:nth-child(2):after {
     content: "";
     width: 6px;
@@ -249,9 +251,72 @@ section {
     width: 80%;
 }
 
+/* ---------------- Service Section ------------ */
+section.dark{
+    background-color: #353b48;
+}
+
+section.dark .section-title{
+    color: #f1f1f1;
+}
+
+section.dark .section-title::before{
+    background-color: #f1f1f1;
+}
+
+section.dark .section-title::after{
+    border: 4px solid #353b48;
+}
+
+.services{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.service {
+    width: calc(33% - 20px);
+    text-align: center;
+    border: 1px solid #48dbfb;
+    margin: 20px 0;
+    padding: 40px 20px;
+    color: #fff;
+    cursor: pointer;
+    transition: .3s linear;
+}
+
+.service .icon {
+    color: #48dbfb;
+    font-size: 40px;
+    margin-bottom: 20px;
+    transition: .1s linear;
+}
+
+.service h4{
+    font-size: 16px;
+    margin-bottom: 6px;
+}
+
+.service:hover{
+    background-color: #48dbfb;
+}
+
+.service:hover .icon {
+    color: #fff;
+}
 
 
-/* ---------- For Animation Text <H1> --------- */
+
+
+
+
+
+
+
+
+
+
+/* _____________________________ For Animation Text <H1> _____________________________ */
 @keyframes textanim {
     25% {
         content: " A web developer";
@@ -357,9 +422,14 @@ section {
         flex: 100%;
         text-align: center;
     }
+
+    .service{
+        width: calc(50% - 20px);
+    }
 }
 
-/* ---For Extra small screen  */
+
+/* ____________ For Extra small screen ___________________ */
 @media screen and (max-width: 600px) {
     .inner-width{
         padding: 0 20px;
@@ -369,4 +439,7 @@ section {
         width: 100%;
     }
 
+    .service{
+        width: 100%;
+    }
 }
