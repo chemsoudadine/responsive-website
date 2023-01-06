@@ -1,70 +1,71 @@
 * {
-  margin: 0;
-  padding: 0;
-  text-decoration: none;
-  font-family: "Ubuntu" sans-serif;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: "Ubuntu", sans-serif;
+    box-sizing: border-box;
 }
 
 .navbar {
-  position: fixed;
-  background-color: transparent;
-  width: 100%;
-  padding: 10px 0;
-  top: 0;
-  z-index: 999;
-  transition: 5% linear;
+    position: fixed;
+    background-color: transparent;
+    width: 100%;
+    padding: 10px 0;
+    top: 0;
+    z-index: 999;
+    transition: 5% linear;
 }
 
 .inner-width {
-  max-width: 1500px;
-  margin: auto;
-  padding: 0 40px;
+    max-width: 1500px;
+    margin: auto;
+    padding: 0 40px;
 }
 
 .navbar .inner-width {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .logo {
-  width: 90px;
-  height: 52px;
-  /* background-image: url("../img/Logo.png"); */
-  background: url(../img/Logo.png) no-repeat center;
-  background-size: contain;
+    width: 90px;
+    height: 52px;
+    /* background-image: url("../img/Logo.png"); */
+    background: url(../img/Logo.png) no-repeat center;
+    background-size: contain;
 }
 
 .menu-toggler {
-  background: none;
-  width: 30px;
-  border: none;
-  cursor: pointer;
-  position: relative;
-  outline: none;
-  z-index: 999;
+    display: none;
+    background: none;
+    width: 30px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    outline: none;
+    z-index: 999;
 }
 
 .menu-toggler span {
-  display: block;
-  height: 3px;
-  background-color: #fff;
-  margin: 6px 0;
-  position: relative;
-  transition: 0.3s linear;
+    display: block;
+    height: 3px;
+    background-color: #fff;
+    margin: 6px 0;
+    position: relative;
+    transition: 0.3s linear;
 }
 
 .navbar-menu a {
-  color: #fff;
-  font-size: 15px;
-  font-weight: 500;
-  margin-left: 30px;
-  transition: 0.3s linear;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    margin-left: 30px;
+    transition: 0.3s linear;
 }
 
 .navbar-menu a:hover {
-  color: #48dbfb !important;
+    color: #48dbfb !important;
 }
 
 
@@ -73,16 +74,16 @@
     padding: 18px 0;
 }
 
-.sticky .logo{
+.sticky .logo {
     background-image: url("../img/logo.png");
 }
 
-.sticky .navbar-menu a{
+.sticky .navbar-menu a {
     color: #111;
 }
 
 .sticky .menu-toggler span {
-    color: #111;
+    background-color: #111;
 
 }
 
@@ -102,7 +103,7 @@
     text-align: center;
 }
 
-#home .content{
+#home .content {
     width: 100%;
     color: #fff;
 }
@@ -112,40 +113,175 @@
     margin-bottom: 60px;
 }
 
-#home .content h1::after{
+#home .content h1::after {
     content: " Dedine";
     animation: textanim 10s linear infinite;
 }
 
-/* ---------- For Animation Text <H1> --------- */
-@keyframes textanim{
-    25%{
-        content: " A web developer";
-    }
-    50%{
-        content: " A Front-end developer";
-    }
-    75%{
-        content: " A back-end developer";
-    }    
+
+section {
+    padding: 100px 0;
+    background-color: #f1f1f1;
 }
 
-.sm a{
+.section-title{
+    text-align: center;
+    margin-bottom: 80px;
+    position: relative;
+    font-size: 26px;
+    padding-bottom: 20px;
+    color: #111;
+}
+
+.section-title::before{
+    content: "";
+    position: absolute;
+    width: 80px;
+    height: 3px;
+    background-color: #111;
+    bottom: 0;
+    left: calc(50% - 40px);
+}
+
+.section-title::after{
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 10px;
+    background-color: #48dbfb;
+    border: 4px solid #f1f1f1;
+    left: calc(50% - 12px);
+    bottom: -7px;
+}
+
+.about-content{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.about-pic{
+    width: 200px;
+    border-radius: 50%;
+    margin-right: 100px
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h3{
+    margin: 10px 0;
+    color: #444;
+    font-size: 16px;
+}
+
+.about-text h3 span:nth-child(1)::after,
+.about-text h3 span:nth-child(2):after {
+    content: "";
+    width: 6px;
+    height: 6px;
+    background-color: #444;
+    display: inline-block;
+    border-radius: 50%;
+    margin:0 14px;
+}
+.about-text p {
+    font-size: 16px;
+    text-align: justify;
+    line-height: 26px;
+    margin-top: 20px;
+}
+
+.skills {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.skill {
+    width: calc(50% - 20px);
+    margin: 15px 0;
+}
+
+.skill-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.skill-bar {
+    height: 6px;
+    background-color: #ddd;
+    margin-top: 14px;
+    position: relative;
+}
+
+.skill-bar::after{
+    content: "";
+    position: absolute;
+    height: 6px;
+    background-color: #48dbfb;
+    bottom: 0;
+}
+
+.html::after{
+    width: 90%;
+}
+
+.css::after{
+    width: 80%;
+}
+
+.js::after{
+    width: 70%;
+}
+
+.reactjs::after{
+    width: 60%;
+}
+
+.nodejs::after{
+    width: 65%;
+}
+
+.git::after{
+    width: 80%;
+}
+
+
+
+/* ---------- For Animation Text <H1> --------- */
+@keyframes textanim {
+    25% {
+        content: " A web developer";
+    }
+
+    50% {
+        content: " A Front-end developer";
+    }
+
+    75% {
+        content: " A back-end developer";
+    }
+}
+
+.sm a {
     color: #fff;
     font-size: 22px;
     margin: 0 10px;
     transition: .2s linear;
 }
 
-.sm a:hover{
-    color: #48dbfb;    
+.sm a:hover {
+    color: #48dbfb;
 }
 
-#home .buttons{
+#home .buttons {
     margin-top: 60px;
 }
 
-#home .buttons a{
+#home .buttons a {
     display: inline-block;
     margin: 15px 30px;
     color: #48dbfb;
@@ -155,12 +291,11 @@
     border: 1px solid #48dbfb;
     padding: 14px 0;
     border-radius: 6px;
-    transition:.2s linear;
+    transition: .2s linear;
 }
 
 #home .buttons a:hover,
-#home .buttons a:nth-child(2)
-{
+#home .buttons a:nth-child(2) {
     background-color: #48dbfb;
     color: #fff;
 }
@@ -170,7 +305,7 @@
         display: block;
     }
 
-    .navbar-menu{
+    .navbar-menu {
         position: fixed;
         height: 100vh;
         width: 100%;
@@ -182,13 +317,13 @@
         transition: .3s linear;
     }
 
-    .navbar-menu a{
+    .navbar-menu a {
         display: block;
         font-size: 30px;
         margin: 30px 0;
     }
 
-    .sticky .navbar-menu{
+    .sticky .navbar-menu {
         background-color: #f1f1f1;
     }
 
@@ -196,20 +331,42 @@
         right: 0;
     }
 
-    .menu-toggler.active span:nth-child(1){
+    .menu-toggler.active span:nth-child(1) {
         transform: rotate(-45deg);
         top: 4px;
     }
 
-    .menu-toggler.active span:nth-child(2){
+    .menu-toggler.active span:nth-child(2) {
         opacity: 0;
     }
 
-    .menu-toggler.active span:nth-child(3){
+    .menu-toggler.active span:nth-child(3) {
         transform: rotate(45deg);
         bottom: 14px;
     }
-    
 
+    .inner-width{
+        max-width: 800px;
+    }
+
+    .about-pic{
+        margin: 0 auto 60px;
+    }
+
+    .about-text{
+        flex: 100%;
+        text-align: center;
+    }
+}
+
+/* ---For Extra small screen  */
+@media screen and (max-width: 600px) {
+    .inner-width{
+        padding: 0 20px;
+    }
+
+    .skill{
+        width: 100%;
+    }
 
 }
