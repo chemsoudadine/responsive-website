@@ -14,5 +14,12 @@ $(document).ready(function () {
         $('.navbar-menu').toggleClass("active");        
     });
 
+    // ---- For scroll X images on Works section
+    $(".works").magnificPopup({
+        delegate: 'a',
+        type: "image",
+        gallery: {enabled: true}
+    });
+
 
 });
